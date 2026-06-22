@@ -42,8 +42,6 @@ const startSession = async (req, res) => {
   }
 };
 
-// POST /api/interview/:sessionId/answer
-// Body: { questionId, userAns, timeTaken }
 const submitAnswer = async (req, res) => {
   try {
     const { sessionId } = req.params;
@@ -79,11 +77,6 @@ const submitAnswer = async (req, res) => {
       },
       { new: true }
     );
-    // qa.userAns = userAns;
-    // qa.aifeedback = aifeedback;
-    // qa.score = score;
-    // qa.timeTaken = timeTaken;
-
     await session.save();
 
     res.json({ score, aifeedback });
