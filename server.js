@@ -23,7 +23,7 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/interview", require("./routes/interview"));
 
-app.get("/", (req, res) => res.send("Interview Coach API running"));
+app.get("/", (req, res) => res.send("PrepBuddy API running"));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`) );
 
